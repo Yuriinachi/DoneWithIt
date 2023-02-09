@@ -5,5 +5,5 @@ import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 export default function App() {
   <StatusBar hidden />;
-  return <WelcomeScreen />;
+  return <WelcomeScreen />; // to change screens switch WelcomeScreen with ViewImageScreen xx
 }
