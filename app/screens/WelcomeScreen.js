@@ -1,5 +1,14 @@
 import React from "react";
-import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  ImageBackground,
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+} from "react-native";
+
+import SVGimg from "../assets/assalogo.svg";
 
 function WelcomeScreen(props) {
   return (
@@ -7,13 +16,12 @@ function WelcomeScreen(props) {
       style={styles.background}
       source={require("../assets/background.png")}
     >
-      <View style={styles.logoContainer}>
-        <Image
-          style={styles.logo}
-          source={require("../assets/logo-home.png")}
-        />
-        <Text>Advanced Safety Systems Australia</Text>
+      <View>
+        <Text> LOGIN </Text>
+        <Text> Please sign in to continue</Text>
       </View>
+      <SVGimg style={styles.logo} width={100} height={100} />
+
       <View style={styles.loginButton}>
         <Text style={styles.loginButton}> LOGIN PLACEHOLDER</Text>
       </View>
@@ -27,7 +35,7 @@ function WelcomeScreen(props) {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    justifyContent: "flex-end",
+    justifyContent: "center",
     alignItems: "center",
   },
   loginButton: {
@@ -37,12 +45,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   logo: {
-    width: 100,
-    height: 100,
+    bottom: 0,
+    position: "absolute",
   },
   logoContainer: {
-    position: "absolute",
-    top: 60,
+    top: 0,
     alignItems: "center",
   },
   registerButton: {
