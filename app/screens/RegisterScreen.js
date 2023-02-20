@@ -15,17 +15,17 @@ import {
   TextInput,
   TouchableOpacity,
   SafeAreaView,
+  ScrollView,
 } from "react-native";
 
 import SVGimg from "../assets/assalogo.svg";
 import colors from "../config/colors";
-import RegisterScreen from "./RegisterScreen";
-import CustomButton from "../assets/components/CustomButton";
 import InputField from "../assets/components/InputField";
+import CustomButton from "../assets/components/CustomButton";
 
 SplashScreen.preventAutoHideAsync();
 
-const WelcomeScreen = ({ navigation }) => {
+const RegisterScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fontsLoaded] = useFonts({
@@ -57,8 +57,20 @@ const WelcomeScreen = ({ navigation }) => {
             marginBottom: 30,
           }}
         >
-          Login
+          Register
         </Text>
+
+        <InputField
+          label={"Full Name"}
+          icon={
+            <Ionicons
+              name="person-outline"
+              size={20}
+              color="#666"
+              style={{ marginRight: 5 }}
+            />
+          }
+        />
 
         <InputField
           label={"Email ID"}
@@ -84,11 +96,35 @@ const WelcomeScreen = ({ navigation }) => {
             />
           }
           inputType="password"
-          fieldButtonLabel={"Forgot?"}
-          fieldButtonFunction={() => {}}
         />
 
-        <CustomButton label={"Login"} onPress={() => {}} />
+        <InputField
+          label={"Confirm Password"}
+          icon={
+            <Ionicons
+              name="ios-lock-closed-outline"
+              size={20}
+              color="#666"
+              style={{ marginRight: 5 }}
+            />
+          }
+          inputType="password"
+        />
+
+        <InputField
+          label={"Date of Birth"}
+          icon={
+            <Ionicons
+              name="ios-lock-closed-outline"
+              size={20}
+              color="#666"
+              style={{ marginRight: 5 }}
+            />
+          }
+          inputType="password"
+        />
+
+        <CustomButton label={"Register"} onPress={() => {}} />
 
         <View
           style={{
@@ -97,8 +133,8 @@ const WelcomeScreen = ({ navigation }) => {
             marginBottom: 30,
           }}
         >
-          <Text>New to the app?</Text>
-          <TouchableOpacity onPress={() => navigation.navigate("Register")}>
+          <Text>Already registered?</Text>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
             <Text
               style={{
                 color: colors.primary,
@@ -106,7 +142,7 @@ const WelcomeScreen = ({ navigation }) => {
                 marginLeft: 5,
               }}
             >
-              Register
+              Login
             </Text>
           </TouchableOpacity>
         </View>
@@ -146,4 +182,4 @@ const styles = StyleSheet.create({
     marginBottom: 25,
   },
 });
-export default WelcomeScreen;
+export default RegisterScreen;
