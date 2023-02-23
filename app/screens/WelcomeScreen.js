@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useCallback, useState } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
@@ -7,14 +6,13 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 import {
-  Image,
-  ImageBackground,
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
   TouchableOpacity,
   SafeAreaView,
+  StyleSheet,
+  TextInput,
+  Image,
+  Text,
+  View,
 } from "react-native";
 
 import SVGimg from "../assets/assalogo.svg";
@@ -88,9 +86,12 @@ const WelcomeScreen = ({ navigation }) => {
           fieldButtonFunction={() => {}}
         />
 
-        <CustomButton label={"Login"} onPress={() => {}} />
+        <CustomButton
+          label={"Login"}
+          onPress={() => navigation.navigate("Home")}
+        />
 
-        <View
+        {/* <View
           style={{
             flexDirection: "row",
             justifyContent: "center",
@@ -109,7 +110,7 @@ const WelcomeScreen = ({ navigation }) => {
               Register
             </Text>
           </TouchableOpacity>
-        </View>
+        </View> */}
       </View>
 
       <SVGimg style={styles.logo} width={100} height={100} alignSelf="center" />
