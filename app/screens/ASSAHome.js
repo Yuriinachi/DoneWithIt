@@ -11,7 +11,7 @@ import {
 
 import CustomButton from "../assets/components/CustomButton";
 import colors from "../config/colors";
-import SVGimg from "../assets/assalogo.svg";
+import SVGimg from "../assets/images/assalogo.svg";
 
 const ASSAHome = ({ navigation }) => {
   return (
@@ -54,7 +54,10 @@ const ASSAHome = ({ navigation }) => {
         }}
       >
         <View>
-          <Image style={styles.glass} source={require("../assets/glass.png")} />
+          <Image
+            style={styles.glass}
+            source={require("../assets/images/glass.png")}
+          />
           <CustomButton
             label={"Search"}
             onPress={() => navigation.navigate("SearchBar")}
@@ -74,7 +77,10 @@ const ASSAHome = ({ navigation }) => {
         }}
       >
         <View>
-          <Image style={styles.swms} source={require("../assets/swms.png")} />
+          <Image
+            style={styles.swms}
+            source={require("../assets/images/swms.png")}
+          />
           <CustomButton
             label={"SWMS"}
             onPress={() => navigation.navigate("SearchBar")}
@@ -94,7 +100,10 @@ const ASSAHome = ({ navigation }) => {
         }}
       >
         <View>
-          <Image style={styles.iir} source={require("../assets/iir.png")} />
+          <Image
+            style={styles.iir}
+            source={require("../assets/images/iir.png")}
+          />
           <CustomButton
             label={"IIR CASES"}
             onPress={() => navigation.navigate("SearchBar")}
@@ -114,7 +123,10 @@ const ASSAHome = ({ navigation }) => {
         }}
       >
         <View>
-          <Image style={styles.chat} source={require("../assets/chat.png")} />
+          <Image
+            style={styles.chat}
+            source={require("../assets/images/chat.png")}
+          />
           <CustomButton
             label={"LIVE CHAT"}
             onPress={() => navigation.navigate("SearchBar")}
@@ -136,7 +148,7 @@ const ASSAHome = ({ navigation }) => {
         <View>
           <Image
             style={styles.profile}
-            source={require("../assets/Dicks.png")}
+            source={require("../assets/images/Dicks.png")}
           />
           <CustomButton
             label={""}
@@ -188,8 +200,8 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   iir: {
-    width: 10,
-    height: 10,
+    width: 60,
+    height: 60,
     position: "relative",
     top: 60,
     zIndex: 1,

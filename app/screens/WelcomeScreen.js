@@ -15,7 +15,7 @@ import {
   View,
 } from "react-native";
 
-import SVGimg from "../assets/assalogo.svg";
+import SVGimg from "../assets/images/assalogo.svg";
 import colors from "../config/colors";
 import RegisterScreen from "./RegisterScreen";
 import CustomButton from "../assets/components/CustomButton";

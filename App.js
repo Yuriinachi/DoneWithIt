@@ -16,14 +16,6 @@ import RegisterScreen from "./app/screens/RegisterScreen";
 import ASSAHome from "./app/screens/ASSAHome";
 import SearchScreen from "./app/screens/SearchScreen";
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
-
 const Stack = createNativeStackNavigator();
 
 function App() {

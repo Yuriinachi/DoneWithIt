@@ -18,7 +18,7 @@ import {
   ScrollView,
 } from "react-native";
 
-import SVGimg from "../assets/assalogo.svg";
+import SVGimg from "../assets/images/assalogo.svg";
 import colors from "../config/colors";
 import InputField from "../assets/components/InputField";
 import CustomButton from "../assets/components/CustomButton";
