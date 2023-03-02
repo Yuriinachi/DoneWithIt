@@ -10,7 +10,7 @@ export default function CustomButton({ label, onPress }) {
         backgroundColor: colors.primary,
         padding: 20,
         borderRadius: 20,
-        marginBottom: 30,
+        marginBottom: 0,
       }}
     >
       <Text

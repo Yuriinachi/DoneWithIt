@@ -7,7 +7,15 @@ import {
   StatusBar,
   TouchableOpacity,
   Image,
+  ImageBackground,
 } from "react-native";
+
+import {
+  responsiveHeight,
+  responsiveWidth,
+  responsiveScreenHeight,
+  responsiveScreenWidth,
+} from "react-native-responsive-dimensions";
 
 import CustomButton from "../assets/components/CustomButton";
 import colors from "../config/colors";
@@ -17,40 +25,40 @@ const ASSAHome = ({ navigation }) => {
   return (
     <SafeAreaView
       style={{
-        backgroundColor: colors.fill,
         flex: 1,
       }}
     >
-      <StatusBar barStyle={"light-content"} />
       <StatusBar backgroundColor={colors.darkgreen} />
       <View
         style={{
           backgroundColor: colors.darkgreen,
-          width: "100%",
-          height: "13%",
+          width: responsiveScreenWidth(100),
+          height: responsiveScreenHeight(13),
           marginTop: "-15%",
         }}
       />
       <View
         style={{
           backgroundColor: colors.lightgreen,
-          width: "100%",
-          height: "2%",
+          width: responsiveWidth(100),
+          height: responsiveHeight(2),
         }}
       />
       <View
-        style={{ backgroundColor: colors.fill, width: "100%", height: 100 }}
+        style={{
+          backgroundColor: colors.fill,
+          width: responsiveWidth(100),
+          height: responsiveHeight(100),
+        }}
       />
       <Text style={styles.header}>HOME PAGE</Text>
-      <View
+      {/* <View
         style={{
-          marginRight: 25,
-          marginLeft: 25,
-          width: "87%",
-          height: 100,
+          width: responsiveWidth(90),
+          height: responsiveHeight(60),
           justifyContent: "center",
-          position: "relative",
-          bottom: 80,
+          alignSelf: "center",
+          position: "absolute",
         }}
       >
         <View>
@@ -60,20 +68,18 @@ const ASSAHome = ({ navigation }) => {
           />
           <CustomButton
             label={"Search"}
-            onPress={() => navigation.navigate("SearchBar")}
+            onPress={() => navigation.navigate("RegisterScreen")}
           />
         </View>
-      </View>
+      </View> */}
 
-      <View
+      {/* <View
         style={{
-          marginRight: 25,
-          marginLeft: 25,
-          width: "87%",
-          height: 100,
+          width: responsiveWidth(90),
+          height: responsiveHeight(90),
           justifyContent: "center",
-          position: "relative",
-          bottom: 80,
+          alignSelf: "center",
+          position: "absolute",
         }}
       >
         <View>
@@ -86,40 +92,15 @@ const ASSAHome = ({ navigation }) => {
             onPress={() => navigation.navigate("SearchBar")}
           />
         </View>
-      </View>
+      </View> */}
 
       <View
         style={{
-          marginRight: 25,
-          marginLeft: 25,
-          width: "87%",
-          height: 100,
+          width: responsiveWidth(90),
+          height: responsiveHeight(150),
           justifyContent: "center",
-          position: "relative",
-          bottom: 60,
-        }}
-      >
-        <View>
-          <Image
-            style={styles.iir}
-            source={require("../assets/images/iir.png")}
-          />
-          <CustomButton
-            label={"IIR CASES"}
-            onPress={() => navigation.navigate("SearchBar")}
-          />
-        </View>
-      </View>
-
-      <View
-        style={{
-          marginRight: 25,
-          marginLeft: 25,
-          width: "87%",
-          height: 100,
-          justifyContent: "center",
-          position: "relative",
-          bottom: 80,
+          alignSelf: "center",
+          position: "absolute",
         }}
       >
         <View>
@@ -133,16 +114,34 @@ const ASSAHome = ({ navigation }) => {
           />
         </View>
       </View>
-
       <View
         style={{
-          marginLeft: 25,
-          width: "15%",
-          height: "10%",
+          width: responsiveWidth(15),
+          height: responsiveHeight(10),
           justifyContent: "center",
           position: "absolute",
-          bottom: "96%",
-          left: "78%",
+          bottom: responsiveHeight(87),
+          left: responsiveWidth(10),
+        }}
+      >
+        <ImageBackground
+          style={styles.profile}
+          source={require("../assets/images/Dicks.png")}
+        >
+          <CustomButton
+            label={"FUCK YOU"}
+            onPress={() => navigation.navigate("Main")}
+          />
+        </ImageBackground>
+      </View>
+      <View
+        style={{
+          width: responsiveWidth(15),
+          height: responsiveHeight(10),
+          justifyContent: "center",
+          position: "absolute",
+          bottom: responsiveHeight(87),
+          left: responsiveWidth(80),
         }}
       >
         <View>
@@ -151,7 +150,71 @@ const ASSAHome = ({ navigation }) => {
             source={require("../assets/images/Dicks.png")}
           />
           <CustomButton
+            style={{ zIndex: 0 }}
             label={""}
+            onPress={() => navigation.navigate("SearchBar")}
+          />
+        </View>
+      </View>
+      <View
+        style={{
+          width: responsiveWidth(90),
+          height: responsiveHeight(10),
+          justifyContent: "center",
+          position: "absolute",
+          bottom: responsiveHeight(55),
+          left: responsiveWidth(5),
+        }}
+      >
+        <View>
+          <Image
+            style={styles.profile}
+            source={require("../assets/images/Dicks.png")}
+          />
+          <CustomButton
+            label={"KILL"}
+            onPress={() => navigation.navigate("SearchBar")}
+          />
+        </View>
+      </View>
+      <View
+        style={{
+          width: responsiveWidth(90),
+          height: responsiveHeight(10),
+          justifyContent: "center",
+          position: "absolute",
+          bottom: responsiveHeight(35),
+          left: responsiveWidth(5),
+        }}
+      >
+        <View>
+          <Image
+            style={styles.profile}
+            source={require("../assets/images/Dicks.png")}
+          />
+          <CustomButton
+            label={"PLS"}
+            onPress={() => navigation.navigate("SearchBar")}
+          />
+        </View>
+      </View>
+      <View
+        style={{
+          width: responsiveWidth(90),
+          height: responsiveHeight(10),
+          justifyContent: "center",
+          position: "absolute",
+          bottom: responsiveHeight(45),
+          left: responsiveWidth(5),
+        }}
+      >
+        <View>
+          <Image
+            style={styles.profile}
+            source={require("../assets/images/Dicks.png")}
+          />
+          <CustomButton
+            label={"ME"}
             onPress={() => navigation.navigate("SearchBar")}
           />
         </View>
@@ -166,10 +229,9 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "500",
     color: "green",
-    marginTop: 120,
+    top: responsiveHeight(20),
     alignSelf: "center",
     position: "absolute",
-    zIndex: 1,
   },
   logo: {
     bottom: 0,
@@ -179,10 +241,10 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   glass: {
-    width: 60,
-    height: 60,
+    width: 10,
+    height: 10,
     position: "relative",
-    top: 60,
+    top: 30,
     zIndex: 1,
   },
   swms: {
@@ -207,10 +269,10 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   profile: {
-    width: 10,
-    height: 10,
+    width: 60,
+    height: 60,
     position: "relative",
-    top: 30,
+    top: 60,
     zIndex: 1,
   },
 });
